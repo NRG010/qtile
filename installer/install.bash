@@ -9,7 +9,7 @@ cd yay
 makepkg -si
 
 # Nvidia
-yay -S --needed linux-zen-headers nvidia-dkms neovim
+yay -S --needed linux-zen-headers nvidia-dkms neovim xorg-xinit xorg-xrandr xorg-server
 sudo cp ./grub /etc/default/grub
 sudo cp ./mkinitcpio.conf /etc/mkinitcpio.conf
 sudo cp ./10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
@@ -36,17 +36,14 @@ yay -S --needed pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-ja
 # Yazi
 yay -S --needed yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zoxide imagemagick imv zathura zathura-cb zathura-pdf-mupdf
 
-# Screenshot
-yay -S --needed slurp grim swappy
-
 # Media
-yay -S --needed qutebrowser mpv yt-dlp obsidian qbittorrent
+yay -S --needed qutebrowser mpv yt-dlp obsidian qbittorrent steam
 
 # Aurs
 yay -S --needed vivaldi-widevine ani-cli youtube-music-bin
 
 # Qtile
-yay -S --needed wezterm qtile dunst bpytop
+yay -S --needed wezterm qtile dunst bpytop feh redshift brightnessctl xsel clipmenu dmenu
 
 # Misc.
 rustup default stable
